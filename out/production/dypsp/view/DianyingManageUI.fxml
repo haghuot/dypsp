@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-image: url('moviebg2.jpg');" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DianyingController">
+   <center>
+      <TableView fx:id="dianyingTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+		  <TableColumn fx:id="dianyingColumn" prefWidth="75.0" text="电影" />
+		  <TableColumn fx:id="yingpianleixingColumn" prefWidth="75.0" text="影片类型" />
+		  <TableColumn fx:id="shizhangColumn" prefWidth="75.0" text="时长" />
+		  <TableColumn fx:id="daoyanColumn" prefWidth="75.0" text="导演" />
+		  <TableColumn fx:id="haibaoColumn" prefWidth="75.0" text="海报" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="101.0" prefWidth="875.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Label text="电影：" />
+                  <TextField fx:id="dianyingQueryTxt" prefHeight="32.0" prefWidth="161.0" />
+                  <Label text="影片类型：" />
+				  <ComboBox prefHeight="32.0" prefWidth="161.0" promptText="影片类型" fx:id="yingpianleixingQueryCombox" />
+                  <Button mnemonicParsing="false" onAction="#reset" text="重置" />
+                  <Button mnemonicParsing="false" onAction="#query" text="查询" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#delete" text="删除" />
+                  <Button mnemonicParsing="false" onAction="#refresh" text="刷新">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <right>
+      <VBox prefHeight="473.0" prefWidth="158.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="电影：">
+            	<VBox.margin>
+                  <Insets left="10.0" />
+                </VBox.margin>
+            </Label>
+            <TextField fx:id="dianyingTxt" prefHeight="31.0" prefWidth="158.0">
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></TextField>
+            
+            <Label text="影片类型：">
+            	<VBox.margin>
+                  <Insets left="10.0" />
+                </VBox.margin>
+            </Label>
+			<ComboBox prefHeight="35.0" prefWidth="150.0" promptText="影片类型" fx:id="yingpianleixingCombox">
+			<VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></ComboBox>
+            
+            <Label text="时长：">
+            	<VBox.margin>
+                  <Insets left="10.0" />
+                </VBox.margin>
+            </Label>
+            <TextField fx:id="shizhangTxt" prefHeight="31.0" prefWidth="158.0">
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></TextField>
+            
+            <Label text="导演：">
+            	<VBox.margin>
+                  <Insets left="10.0" />
+                </VBox.margin>
+            </Label>
+            <TextField fx:id="daoyanTxt" prefHeight="31.0" prefWidth="158.0">
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></TextField>
+            
+            <Label text="海报：">
+            	<VBox.margin>
+                  <Insets left="10.0" />
+                </VBox.margin>
+            </Label>
+            <TextField fx:id="haibaoTxt" prefHeight="31.0" prefWidth="158.0">
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></TextField>
+            <ImageView fx:id="haibaoImg" fitHeight="70.0" fitWidth="139.0" pickOnBounds="true">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </ImageView>
+			<Button mnemonicParsing="false" onAction="#uploadHaibao" prefHeight="26.0" prefWidth="302.0" text="上传">
+			 <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></Button>
+                       
+            
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="938.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#add" text="新增" />
+            <Button mnemonicParsing="false" onAction="#edit" text="修改">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

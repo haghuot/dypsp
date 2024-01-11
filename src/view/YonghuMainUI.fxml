@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" style="-fx-background-image: url('moviebg2.jpg');" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.YonghuMainController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="场次选座">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openChangciSelectSeatUI" text="打开" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="我的资料">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openmyinfo" text="打开" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="我的订单">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openmyorder" text="打开" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="操作">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#exit" text="退出" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</VBox>

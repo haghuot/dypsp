@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-image: url('moviebg2.jpg');" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.YonghuController">
+   <center>
+      <TableView fx:id="yonghuTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+		  <TableColumn fx:id="zhanghaoColumn" prefWidth="75.0" text="账号" />
+		  <TableColumn fx:id="mimaColumn" prefWidth="75.0" text="密码" />
+		  <TableColumn fx:id="shoujihaoColumn" prefWidth="75.0" text="手机号" />
+		  <TableColumn fx:id="shengriColumn" prefWidth="75.0" text="生日" />
+		  <TableColumn fx:id="shenfenzhenghousiweiColumn" prefWidth="75.0" text="身份证后四位" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="101.0" prefWidth="875.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Label text="账号：" />
+                  <TextField fx:id="zhanghaoQueryTxt" prefHeight="32.0" prefWidth="161.0" />
+                  <Label text="手机号：" />
+                  <TextField fx:id="shoujihaoQueryTxt" prefHeight="32.0" prefWidth="161.0" />
+                  <Button mnemonicParsing="false" onAction="#reset" text="重置" />
+                  <Button mnemonicParsing="false" onAction="#query" text="查询" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#delete" text="删除" />
+                  <Button mnemonicParsing="false" onAction="#refresh" text="刷新">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <right>
+      <VBox prefHeight="473.0" prefWidth="158.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="账号：">
+            	<VBox.margin>
+                  <Insets left="10.0" />
+                </VBox.margin>
+            </Label>
+            <TextField fx:id="zhanghaoTxt" prefHeight="31.0" prefWidth="158.0">
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></TextField>
+            
+            <Label text="密码：">
+            	<VBox.margin>
+                  <Insets left="10.0" />
+                </VBox.margin>
+            </Label>
+            <TextField fx:id="mimaTxt" prefHeight="31.0" prefWidth="158.0">
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></TextField>
+            
+            <Label text="手机号：">
+            	<VBox.margin>
+                  <Insets left="10.0" />
+                </VBox.margin>
+            </Label>
+            <TextField fx:id="shoujihaoTxt" prefHeight="31.0" prefWidth="158.0">
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></TextField>
+            
+            <Label text="生日：">
+            	<VBox.margin>
+                  <Insets left="10.0" />
+                </VBox.margin>
+            </Label>
+			<DatePicker fx:id="shengriDate" prefHeight="31.0" prefWidth="158.0">
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></DatePicker>
+            
+            <Label text="身份证后四位：">
+            	<VBox.margin>
+                  <Insets left="10.0" />
+                </VBox.margin>
+            </Label>
+            <TextField fx:id="shenfenzhenghousiweiTxt" prefHeight="31.0" prefWidth="158.0">
+            <VBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </VBox.margin></TextField>
+            
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="938.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#add" text="新增" />
+            <Button mnemonicParsing="false" onAction="#edit" text="修改">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

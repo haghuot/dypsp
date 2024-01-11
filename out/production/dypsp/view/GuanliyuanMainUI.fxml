@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" style="-fx-background-image: url('moviebg2.jpg');" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GuanliyuanMainController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="管理员管理">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openGuanliyuanManageUI" text="打开" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="电影管理">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openDianyingManageUI" text="打开" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="场次管理">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openChangciManageUI" text="打开" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="用户管理">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openYonghuManageUI" text="打开" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="场次订单管理">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openChangcidingdanManageUI" text="打开" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="操作">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#exit" text="退出" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</VBox>
